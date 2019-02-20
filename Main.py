@@ -1,17 +1,17 @@
 import discord
-from discord.ext.commands import Bot
 from discord.ext import commands
 import asyncio
 import time
 import random
-from discord import Game
+from discord.utils import get
 from itertools import cycle
 import json
 import os
 import bs4, requests
+import youtube_dl
 from time import gmtime, strftime
 from discord import opus
-import youtube_dl
+
 client = commands.Bot(command_prefix=("s."))
 status = ["testing the bot", "s.help"]
 
