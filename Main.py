@@ -88,9 +88,10 @@ async def leave(ctx):
     await client.say('Left voice channel')
 	
 @client.command(pass_context=True)
-async def on(con):
-    emoji = discord.utils.get(client.get_all_emojis(), name='pingboi')
-    emb = discord.Embed(title='Emoji',description='This is an emoji {}'.format(emoji))
-    await client.say(embed=emb)
+async def test(con):
+	emoji = discord.utils.get(client.get_all_emojis(), name='pingboi')
+	emb = discord.Embed(description='{} help'.format(emoji))
+	emb.add_field(name="test", value="test1")
+	await client.say(embed=emb)
 
 client.run(os.environ['BOT_TOKEN'])
