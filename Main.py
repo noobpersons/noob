@@ -89,7 +89,7 @@ async def leave(ctx):
 	
 @client.command(pass_context=True)
 async def on(con):
-    emoji = discord.utils.get(bot.get_all_emojis(), name='pingboi')
+    emoji = discord.utils.get(client.get_all_emojis(), name='pingboi')
     emb = discord.Embed(title='Emoji',description='This is an emoji {}'.format(emoji))
     await client.say(embed=emb)
 
